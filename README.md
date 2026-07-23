@@ -121,3 +121,18 @@ Boot Verification
 ## License
 
 This repository is intended for development, debugging, and educational purposes.
+## Generated Firmware Image
+
+The firmware image generated from this OpenWrt build system has been uploaded separately because it exceeds GitHub's recommended file size.
+
+**Google Drive:**
+
+https://drive.google.com/drive/folders/1AHF0KBe29sgaGxBCmYPUntaxz-lUP_zO?usp=sharing
+
+Contents include:
+
+- OpenWrt firmware image used for flashing the Banana Pi BPI-R4 Pro (MT7988A)
+- `mt7988-ram-comb-bl2.bin`
+- Generated build artifacts required for testing
+
+This is the exact firmware image built from the source code in this repository.
