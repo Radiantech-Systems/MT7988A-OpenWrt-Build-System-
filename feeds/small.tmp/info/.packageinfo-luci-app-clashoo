@@ -1,0 +1,36 @@
+Source-Makefile: feeds/small/luci-app-clashoo/Makefile
+
+Package: luci-app-clashoo
+Submenu: 3. Applications
+Version: 1.28.7-r2
+Depends: +libc +luci-base +clashoo
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: luci
+Category: LuCI
+Repository: base
+Title: LuCI app for Clashoo
+Maintainer: kenzok8
+Source: 
+Type: ipkg
+Description:   LuCI web interface for Clashoo
+@@
+
+Package: luci-i18n-clashoo-zh-cn
+Version: 1.28.7-r2
+Depends: +libc +luci-app-clashoo
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: luci
+Category: LuCI
+Repository: base
+Title: luci-app-clashoo - Simplified Chinese (zh-cn)
+Maintainer: kenzok8
+Source: 
+Type: ipkg
+Description: luci-app-clashoo - Simplified Chinese (zh-cn)
+@@
+
+

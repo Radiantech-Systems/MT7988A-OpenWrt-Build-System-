@@ -1,0 +1,29 @@
+Source-Makefile: feeds/kenzo/ddnsto/Makefile
+DDNSTO_TYPE is set to: standard
+
+Package: ddnsto
+Submenu: Web Servers/Proxies
+Version: 1
+Depends: +libc 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Repository: base
+Title: DDNS.to - the reverse proxy (standard)
+Maintainer: 
+Source: ddnsto-standard-4.2.2.tar.gz
+URL: https://www.ddnsto.com/
+Type: ipkg
+Description:   DDNS.to is a reverse proxy service that allows you to access
+  your devices from anywhere without public IP or port forwarding.
+  
+  Build type: standard
+  Features:
+  - Multi-device index support
+  - WebDAV file sharing
+  - Intranet penetration
+@@
+
+

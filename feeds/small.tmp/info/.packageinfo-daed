@@ -1,0 +1,39 @@
+Source-Makefile: feeds/small/daed/Makefile
+Build-Depends: golang/host bpf-headers
+
+Package: daed
+Submenu: Web Servers/Proxies
+Version: 2026.07.20-r2
+Depends: +libc @(aarch64||arm||i386||i686||loongarch64||mips||mips64||mips64el||mipsel||powerpc64||riscv64||x86_64) +ca-bundle +kmod-sched-core +kmod-sched-bpf +kmod-veth +v2ray-geoip +v2ray-geosite +@KERNEL_XDP_SOCKETS +DAED_USE_VMLINUX_BTF:vmlinux-btf
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Repository: base
+Title: A Modern Dashboard For dae
+Maintainer: kenzok8
+Source: daed-src-2026.07.20-42db711ac8ce.tar.gz
+License: AGPL-3.0-only MIT
+LicenseFiles: LICENSE wing/LICENSE
+URL: https://github.com/daeuniverse/daed
+Type: ipkg
+Description:   daed is a backend of dae, provides a method to bundle arbitrary
+  frontend, dae and geodata into one binary.
+@@
+Config:
+	choice
+		prompt "BTF source for CO-RE"
+		default DAED_USE_KERNEL_BTF
+		depends on PACKAGE_daed
+
+	config DAED_USE_KERNEL_BTF
+		bool "Use kernel BTF (integrated)"
+		depends on KERNEL_DEBUG_INFO_BTF
+
+	config DAED_USE_VMLINUX_BTF
+		bool "Use vmlinux-btf package"
+	endchoice
+@@
+
+

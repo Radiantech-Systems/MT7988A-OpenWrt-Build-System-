@@ -1,0 +1,23 @@
+Source-Makefile: feeds/small/dns2socks/Makefile
+
+Package: dns2socks
+Submenu: IP Addresses and Names
+Version: 2.2-r1
+Depends: +libc +libpthread
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Repository: base
+Title: DNS to SOCKS or HTTP proxy
+Maintainer: ghostmaker
+Source: dns2socks-2.2.tar.gz
+License: BSD-3-Clause
+URL: https://github.com/kenzok8/dns2socks
+Type: ipkg
+Description:   This is a command line utility to resolve DNS requests via
+  a SOCKS tunnel like Tor or a HTTP proxy.
+@@
+
+

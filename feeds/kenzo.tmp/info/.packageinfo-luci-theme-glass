@@ -1,0 +1,166 @@
+Source-Makefile: feeds/kenzo/luci-theme-glass/Makefile
+Build-Depends: lua/host luci-base/host LUCI_CSSTIDY:csstidy/host LUCI_SRCDIET:luasrcdiet/host 
+
+Package: luci-theme-glass
+Submenu: 4. Themes
+Version: 1.1.6-r1
+Depends: +libc 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: luci
+Category: LuCI
+Repository: base
+Title: Glass - Apple-inspired glassmorphism theme for LuCI
+Maintainer: OpenWrt LuCI community
+Source: 
+URL: https://github.com/openwrt/luci
+Type: ipkg
+Description: Glass - Apple-inspired glassmorphism theme for LuCI
+@@
+
+Package: luci-i18n-glass-de
+Default: LUCI_LANG_de||(ALL&&m)
+Version: x
+Depends: +libc luci-theme-glass
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: luci
+Category: LuCI
+Repository: base
+Title: luci-theme-glass - de translation
+Maintainer: 
+Source: 
+Type: ipkg
+Hidden: 1
+Description:     Translation for luci-theme-glass - Deutsch (German)
+@@
+
+Package: luci-i18n-glass-es
+Default: LUCI_LANG_es||(ALL&&m)
+Version: x
+Depends: +libc luci-theme-glass
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: luci
+Category: LuCI
+Repository: base
+Title: luci-theme-glass - es translation
+Maintainer: 
+Source: 
+Type: ipkg
+Hidden: 1
+Description:     Translation for luci-theme-glass - Español (Spanish)
+@@
+
+Package: luci-i18n-glass-fr
+Default: LUCI_LANG_fr||(ALL&&m)
+Version: x
+Depends: +libc luci-theme-glass
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: luci
+Category: LuCI
+Repository: base
+Title: luci-theme-glass - fr translation
+Maintainer: 
+Source: 
+Type: ipkg
+Hidden: 1
+Description:     Translation for luci-theme-glass - Français (French)
+@@
+
+Package: luci-i18n-glass-ja
+Default: LUCI_LANG_ja||(ALL&&m)
+Version: x
+Depends: +libc luci-theme-glass
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: luci
+Category: LuCI
+Repository: base
+Title: luci-theme-glass - ja translation
+Maintainer: 
+Source: 
+Type: ipkg
+Hidden: 1
+Description:     Translation for luci-theme-glass - 日本語 (Japanese)
+@@
+
+Package: luci-i18n-glass-ko
+Default: LUCI_LANG_ko||(ALL&&m)
+Version: x
+Depends: +libc luci-theme-glass
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: luci
+Category: LuCI
+Repository: base
+Title: luci-theme-glass - ko translation
+Maintainer: 
+Source: 
+Type: ipkg
+Hidden: 1
+Description:     Translation for luci-theme-glass - 한국어 (Korean)
+@@
+
+Package: luci-i18n-glass-ru
+Default: LUCI_LANG_ru||(ALL&&m)
+Version: x
+Depends: +libc luci-theme-glass
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: luci
+Category: LuCI
+Repository: base
+Title: luci-theme-glass - ru translation
+Maintainer: 
+Source: 
+Type: ipkg
+Hidden: 1
+Description:     Translation for luci-theme-glass - Русский (Russian)
+@@
+
+Package: luci-i18n-glass-zh-cn
+Default: LUCI_LANG_zh_Hans||(ALL&&m)
+Version: x
+Depends: +libc luci-theme-glass
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: luci
+Category: LuCI
+Repository: base
+Title: luci-theme-glass - zh-cn translation
+Maintainer: 
+Source: 
+Type: ipkg
+Hidden: 1
+Description:     Translation for luci-theme-glass - 简体中文 (Chinese Simplified)
+@@
+
+Package: luci-i18n-glass-zh-tw
+Default: LUCI_LANG_zh_Hant||(ALL&&m)
+Version: x
+Depends: +libc luci-theme-glass
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: luci
+Category: LuCI
+Repository: base
+Title: luci-theme-glass - zh-tw translation
+Maintainer: 
+Source: 
+Type: ipkg
+Hidden: 1
+Description:     Translation for luci-theme-glass - 繁體中文 (Chinese Traditional)
+@@
+
+

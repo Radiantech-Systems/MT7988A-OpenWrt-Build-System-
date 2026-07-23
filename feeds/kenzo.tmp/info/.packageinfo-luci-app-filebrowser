@@ -1,0 +1,40 @@
+Source-Makefile: feeds/kenzo/luci-app-filebrowser/Makefile
+Build-Depends: lua/host luci-base/host LUCI_CSSTIDY:csstidy/host LUCI_SRCDIET:luasrcdiet/host 
+
+Package: luci-app-filebrowser
+Submenu: 3. Applications
+Version: 1.0-r1
+Depends: +libc +filebrowser +luci-lua-runtime
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: luci
+Category: LuCI
+Repository: base
+Title: LuCI Support for FileBrowser
+Maintainer: OpenWrt LuCI community
+Source: 
+URL: https://github.com/openwrt/luci
+Type: ipkg
+Description:    FileBrowser - a web-based file manager for your OpenWrt
+@@
+
+Package: luci-i18n-filebrowser-zh-cn
+Default: LUCI_LANG_zh_Hans||(ALL&&m)
+Version: x
+Depends: +libc luci-app-filebrowser
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: luci
+Category: LuCI
+Repository: base
+Title: luci-app-filebrowser - zh-cn translation
+Maintainer: kenzok8 <https://github.com/kenzok78>
+Source: 
+Type: ipkg
+Hidden: 1
+Description:     Translation for luci-app-filebrowser - 简体中文 (Chinese Simplified)
+@@
+
+

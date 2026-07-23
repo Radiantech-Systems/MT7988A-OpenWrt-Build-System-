@@ -1,0 +1,21 @@
+Source-Makefile: feeds/kenzo/luci-app-quickfile/quickfile/Makefile
+
+Package: quickfile
+Submenu: Web Servers/Proxies
+Version: 1.0.25-r1
+Depends: +libc @(arm||aarch64||x86_64)
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Repository: base
+Title: Quick File Manager
+Maintainer: sbwml <admin@cooluc.com>
+Source: quickfile-1.0.25.tar.gz
+URL: https://git.cooluc.com/sbwml/quickfile
+Type: ipkg
+Description:   Lightweight web-based file manager for OpenWrt/LuCI with minimal resource usage.
+@@
+
+

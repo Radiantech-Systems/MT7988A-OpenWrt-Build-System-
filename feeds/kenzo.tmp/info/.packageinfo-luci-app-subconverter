@@ -1,0 +1,20 @@
+Source-Makefile: feeds/kenzo/luci-app-subconverter/Makefile
+
+Package: luci-app-subconverter
+Submenu: 3. Applications
+Version: 1.5.1-r1
+Depends: +libc +luci-base +luci +luci-compat
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: luci
+Category: LuCI
+Repository: base
+Title: Subconverter
+Maintainer: 
+Source: 
+Type: ipkg
+Description: 	a control panel for subweb and subconverter
+@@
+
+

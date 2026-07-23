@@ -1,0 +1,24 @@
+Source-Makefile: feeds/small/tuic-client/Makefile
+Build-Depends: rust/host
+
+Package: tuic-client
+Submenu: Web Servers/Proxies
+Version: 1.8.11-r1
+Depends: +libc @(aarch64||arm||mips||mipsel||x86_64||i386||i686||riscv64||loongarch64)
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Repository: base
+Title: TUIC proxy protocol client
+Maintainer: Tianling Shen <cnsztl@immortalwrt.org>
+Source: tuic-client-1.8.11.tar.gz
+License: GPL-3.0-only
+LicenseFiles: LICENSE
+URL: https://github.com/Itsusinn/tuic
+Type: ipkg
+Description:   Delicately-TUICed 0-RTT proxy protocol client.
+@@
+
+

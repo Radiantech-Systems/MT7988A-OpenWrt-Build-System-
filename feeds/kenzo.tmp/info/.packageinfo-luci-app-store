@@ -1,0 +1,22 @@
+Source-Makefile: feeds/kenzo/luci-app-store/Makefile
+Build-Depends: lua/host luci-base/host LUCI_CSSTIDY:csstidy/host LUCI_SRCDIET:luasrcdiet/host 
+
+Package: luci-app-store
+Submenu: 3. Applications
+Version: 0.2.0-r3
+Depends: +libc +curl +tar +libuci-lua +mount-utils +luci-lib-taskd +opkg +luci-lua-runtime
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: luci
+Category: LuCI
+Repository: base
+Title: LuCI based ipk/apk store
+Maintainer: OpenWrt LuCI community
+Source: istore-ui-v0.2.0-2.tar.gz
+URL: https://github.com/openwrt/luci
+Type: ipkg
+Description:    luci-app-store is a ipk/apk store developed by LinkEase team
+@@
+
+

@@ -1,0 +1,38 @@
+Source-Makefile: feeds/small/dae/Makefile
+Build-Depends: golang/host bpf-headers
+
+Package: dae
+Submenu: Web Servers/Proxies
+Version: 2026.07.20-r1
+Depends: +libc @(aarch64||arm||i386||i686||loongarch64||mips||mips64||mips64el||mipsel||powerpc64||riscv64||x86_64) +ca-bundle +kmod-sched-core +kmod-sched-bpf +kmod-veth +v2ray-geoip +v2ray-geosite +@KERNEL_XDP_SOCKETS +DAE_USE_VMLINUX_BTF:vmlinux-btf
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Repository: base
+Title: A lightweight and high-performance transparent proxy solution
+Maintainer: kenzok8
+Source: dae-src-2026.07.20-4c2bb0f0cb5e.tar.gz
+License: AGPL-3.0-only
+URL: https://github.com/daeuniverse/dae
+Type: ipkg
+Description:   dae, means goose, is a lightweight and high-performance transparent
+  proxy solution.
+@@
+Config:
+	choice
+		prompt "BTF source for CO-RE"
+		default DAE_USE_KERNEL_BTF
+		depends on PACKAGE_dae
+
+	config DAE_USE_KERNEL_BTF
+		bool "Use kernel BTF (integrated)"
+		depends on KERNEL_DEBUG_INFO_BTF
+
+	config DAE_USE_VMLINUX_BTF
+		bool "Use vmlinux-btf package"
+	endchoice
+@@
+
+

@@ -1,0 +1,35 @@
+Source-Makefile: feeds/small/luci-app-daede/Makefile
+
+Package: luci-app-daede
+Submenu: 3. Applications
+Version: 1.14.7-r17
+Depends: +libc +luci-base +PACKAGE_luci-app-daede_dae:dae +PACKAGE_luci-app-daede_daed:daed
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: luci
+Category: LuCI
+Repository: base
+Title: LuCI app for daede dashboard
+Maintainer: kenzok8
+Source: 
+Type: ipkg
+Description: 	LuCI web interface for managing dae or daed backends.
+@@
+Config:
+	choice
+		prompt "Backend dependency"
+		default PACKAGE_luci-app-daede_daed
+		help
+			Select which backend package luci-app-daede should pull in by default.
+
+	config PACKAGE_luci-app-daede_daed
+		bool "daed backend"
+
+	config PACKAGE_luci-app-daede_dae
+		bool "dae backend"
+
+	endchoice
+@@
+
+

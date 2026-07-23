@@ -1,0 +1,46 @@
+Source-Makefile: feeds/kenzo/smartdns/Makefile
+Build-Depends: PACKAGE_smartdns-ui:node/host PACKAGE_smartdns-ui:rust-bindgen/host
+
+Package: smartdns
+Submenu: IP Addresses and Names
+Version: 48.2-r2
+Depends: +libc +i386:libatomic +libopenssl +zlib
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Repository: base
+Title: smartdns server
+Maintainer: Nick Peng <pymumu@gmail.com>
+Source: smartdns-48.2.tar.gz
+License: GPL-3.0-or-later
+LicenseFiles: LICENSE
+URL: https://www.github.com/pymumu/smartdns/
+Type: ipkg
+Description: SmartDNS is a local DNS server which accepts DNS query requests from local network clients,
+gets DNS query results from multiple upstream DNS servers concurrently, and returns the fastest IP to clients.
+Unlike dnsmasq's all-servers, smartdns returns the fastest IP, and encrypt DNS queries with DoT or DoH.
+@@
+
+Package: smartdns-ui
+Submenu: IP Addresses and Names
+Version: 48.2-r2
+Depends: +libc +smartdns @(aarch64||arm||i386||i686||mips||mipsel||mips64||mips64el||mipsel||powerpc64||riscv64||x86_64) @!(TARGET_x86_geode||TARGET_x86_legacy)
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Repository: base
+Title: smartdns dashboard
+Maintainer: Nick Peng <pymumu@gmail.com>
+Source: smartdns-48.2.tar.gz
+License: GPL-3.0-or-later
+LicenseFiles: LICENSE
+URL: https://www.github.com/pymumu/smartdns/
+Type: ipkg
+Description: A dashboard ui for smartdns server.
+@@
+
+

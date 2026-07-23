@@ -1,0 +1,21 @@
+Source-Makefile: feeds/small/momo/Makefile
+
+Package: momo
+Version: 2026.06.03-r1
+Depends: +libc +ca-bundle +curl firewall4 +ip-full +kmod-inet-diag +kmod-nft-socket +kmod-nft-tproxy +kmod-tun +kmod-dummy +sing-box
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Repository: base
+Title: Transparent Proxy with sing-box on OpenWrt.
+Maintainer: Joseph Mory <morytyann@gmail.com>
+Source: 
+License: GPL-3.0+
+URL: https://github.com/nikkinikki-org
+Type: ipkg
+Description: Transparent Proxy with sing-box on OpenWrt.
+@@
+
+

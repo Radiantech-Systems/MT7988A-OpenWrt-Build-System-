@@ -1,0 +1,24 @@
+Source-Makefile: feeds/small/trojan/Makefile
+Build-Depends: openssl
+
+Package: trojan
+Submenu: Web Servers/Proxies
+Version: 1.17.2-r1
+Depends: +libc +libpthread +libstdcpp +libopenssl +boost +boost-system +boost-program_options +boost-date_time
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Repository: base
+Title: An unidentifiable mechanism that helps you bypass GFW
+Maintainer: GreaterFire
+Source: Trojan-1.17.2.tar.gz
+License: GPL-3.0
+LicenseFiles: LICENSE
+URL: https://github.com/kenzok8/trojan
+Type: ipkg
+Description: An unidentifiable mechanism that helps you bypass GFW
+@@
+
+

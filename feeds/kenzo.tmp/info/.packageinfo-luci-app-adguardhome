@@ -1,0 +1,64 @@
+Source-Makefile: feeds/kenzo/luci-app-adguardhome/Makefile
+Build-Depends: lua/host luci-base/host LUCI_CSSTIDY:csstidy/host LUCI_SRCDIET:luasrcdiet/host 
+
+Package: luci-app-adguardhome
+Submenu: 3. Applications
+Version: 1.0-r9
+Depends: +libc +ca-certs +curl +wget-ssl +PACKAGE_luci-app-adguardhome_INCLUDE_binary:adguardhome +luci-lua-runtime
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: luci
+Category: LuCI
+Repository: base
+Title: LuCI app for AdGuardHome
+Maintainer: OpenWrt LuCI community
+Source: 
+URL: https://github.com/openwrt/luci
+Type: ipkg
+Description:    LuCI support for AdGuardHome
+@@
+Config:
+config PACKAGE_luci-app-adguardhome_INCLUDE_binary
+	bool "Include Binary File"
+	default n
+	help
+	  When enabled, also pulls in the adguardhome binary package.
+	  Disabled by default to avoid init.d/config name conflict with
+	  the adguardhome package (uses lowercase init.d/adguardhome,
+	  while this LuCI app uses /etc/init.d/AdGuardHome). The LuCI
+	  app downloads the binary at runtime, so the package dependency
+	  is only needed for offline / sysupgrade scenarios.
+@@
+
+Package: luci-app-adguardhome
+Submenu: 3. Applications
+Version: 1.0-r9
+Depends: +libc +ca-certs +curl +wget-ssl +PACKAGE_luci-app-adguardhome_INCLUDE_binary:adguardhome +luci-lua-runtime
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: luci
+Category: LuCI
+Repository: base
+Title: LuCI app for AdGuardHome
+Maintainer: OpenWrt LuCI community
+Source: 
+URL: https://github.com/openwrt/luci
+Type: ipkg
+Description:    LuCI support for AdGuardHome
+@@
+Config:
+config PACKAGE_luci-app-adguardhome_INCLUDE_binary
+	bool "Include Binary File"
+	default n
+	help
+	  When enabled, also pulls in the adguardhome binary package.
+	  Disabled by default to avoid init.d/config name conflict with
+	  the adguardhome package (uses lowercase init.d/adguardhome,
+	  while this LuCI app uses /etc/init.d/AdGuardHome). The LuCI
+	  app downloads the binary at runtime, so the package dependency
+	  is only needed for offline / sysupgrade scenarios.
+@@
+
+
